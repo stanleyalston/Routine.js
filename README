@@ -1,0 +1,47 @@
+Conventional approaches in javascript web development.
+
+Classes Included:
+
+- Model
+- Factory
+- Utilities
+- Sync
+- List
+
+Usage:
+
+MODEL - handles data object modeling
+Example:
+    var model = Routine.Model.extend({
+ 	name: "name",
+    	age: 55
+    });
+
+FACTORY - handles local storage and ORM functions
+Example:
+
+UTILITIES - handles relevant web functions
+Example:
+
+SYNC - handles remote ajax calls. can also be used in factory mechanisms
+Example:
+    var sync = Routine.Sync.extend({
+   	method: Routine.CallType.Read,
+     	model: "opt=myparam",
+     	url: "myurl.aspx",
+     	success: function(data){
+		console.log(data);
+    	},
+     	error: function(x, t, e){ 
+		console.log("error");
+     	}
+    });
+
+LIST - handles lists and collections in javascript
+Example:
+    var list = Routine.List.extend({});
+    list.add(model1);
+    list.add(model2);
+    console.log(list.each());
+    
+    list1.remove(model1);
