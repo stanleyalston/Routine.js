@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routine.js Test</title>	 	
+    <link rel="stylesheet" type="text/css" href="Scripts/jasmine.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>	
+	<script type="text/javascript" src="Scripts/jasmine.js"></script>   		
+	<script type="text/javascript" src="Scripts/jasmine-html.js"></script>   
+	<script type="text/javascript" src="Scripts/jasmine-jquery.js"></script>   	
+
+	<!-- source -->
+	<script type="text/javascript" src="../Routine.js"></script>   
+	
+	<!-- specs -->
+	<script type="text/javascript" src="Scenario.js"></script>   
+</head>
+<body>
+	<script type="text/javascript">
+		jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+		jasmine.getEnv().execute();
+	</script>
+</body>
+</html>
